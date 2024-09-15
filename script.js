@@ -23,14 +23,14 @@ function displayNews(articles) {
         listItem.innerHTML = `
         <div class="info">
         <div class="author">
-        <span>Author</span>
+        <span>Authgtior: </span>
         ${article.author || "Unknown"}
         </div>
         <div class="published-at">${new Date(article.publishedAt).toLocaleDateString()}</div>
         </div>
         <img src="${article.urlToImage}" alt="${article.title}">
-        <a href="${article.url}" target="_blank">${article.title}</a>
-        <p class="description">${article.description}</p>
+        <a class="title" href="${article.url}" target="_blank">${article.title}</a>
+        <p class="description">${article.description} || "No Description"</p>
         <div class="source">
         <span>[source]</span>
         ${article.source.name}</div>`;
